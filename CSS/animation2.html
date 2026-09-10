@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+
+            height: 50px;
+            width: 100%;
+            border: 2px solid;
+            border-radius: 20px;
+        }
+        aside{
+            height: 50px;
+            width: 50px;
+            background-color: skyblue;
+            border-radius: 50%;
+            animation: task2 5s linear 1s infinite normal ;
+        }
+        @keyframes task2 {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(1000px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <aside></aside>
+    </section>
+</body>
+</html>

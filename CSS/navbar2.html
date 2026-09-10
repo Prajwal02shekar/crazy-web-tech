@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #navabarContainer {
+            height: 70px;
+            width: 100%;
+            background: linear-gradient(to right, #ffc500, #c21500);
+            display: flex;
+        }
+
+        .logo {
+            height: 70px;
+            flex-basis: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: pink;
+        }
+
+        .logo img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        .logo h2{
+            font-size: 15px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu {
+            height: 70px;
+            flex-basis: 65%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .menu a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        .menu a:hover{
+            color: chartreuse;
+        }
+
+        .icons {
+            height: 70px;
+            flex-basis: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 26px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navabarContainer">
+        <aside class="logo">
+            <!-- <img src="https://img.magnific.com/premium-vector/ecommerce-logo-template_561408-2458.jpg?semt=ais_hybrid&w=740&q=80"
+                alt=""> -->
+                <h2>SuperDuperMarket</h2>
+        </aside>
+        <aside class="menu">
+            <a href="#">Home Page</a>
+            <a href="#">Mens</a>
+            <a href="#">Womens</a>
+            <a href="#">Kids</a>
+            <a href="#">Accessorries</a>
+        </aside>
+        <aside class="icons">
+           <i class="fa-regular fa-user"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </aside>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            height: 600px;
+            width: 600px;
+            border: 2px solid;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        aside {
+            height: 150px;
+            width: 150px;
+            border: 2px solid red;
+        }
+
+        #c1 {
+            background: linear-gradient(to left, yellow, brown, blue, grey, pink);
+        }
+        #c2 {
+            background: repeating-linear-gradient(to right, purple, pink, aqua 50px);
+        }
+        #c3 {
+            background: radial-gradient(orange, yellow, red);
+        }
+        #c4 {
+            background: repeating-radial-gradient(orange, yellow, red 20px);
+        }
+
+        #c5 {
+            background: linear-gradient(orange 33.33%, white 33.33%, white 66.66%, green 66.66%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        article {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background: repeating-conic-gradient(blue,white ,blue 5%);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <aside id="c1"></aside>
+        <aside id="c2"></aside>
+        <aside id="c3"></aside>
+        <aside id="c4"></aside>
+        <aside id="c5">
+            <article></article>
+        </aside>
+        <aside id="c6"></aside>
+    </section>
+</body>
+
+</html>

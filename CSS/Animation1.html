@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            height: 50px;
+            width: 50px;
+            /* background: linear-gradient(to right, #023c0d, #5bb226, #98d0c1, #de512b, #0c0c6d); */
+
+            background-color: antiquewhite;
+            animation-name: task1;
+            animation-duration: 6s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+
+        }
+
+        @keyframes task1 {
+            /* from{
+                width: 50px;
+            }
+            to{
+                width: 100%;
+                background-color: #de512b;
+            } */
+
+            0%{
+                width: 50px;
+            }
+            50%{
+                background-color: red;
+            }
+            100%{
+                width: 100%;
+                background-color: aqua;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section></section>
+</body>
+
+</html>

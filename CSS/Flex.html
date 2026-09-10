@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parentElement {
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .childElements {
+            height: 100px;
+            width: 100px;
+            border: 2px solid orangered;
+            font-size: larger;
+            font-weight: bolder;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="parentElement">
+        <aside class="childElements">1</aside>
+        <aside class="childElements">2</aside>
+        <aside class="childElements">3</aside>
+        <aside class="childElements">4</aside>
+        <aside class="childElements">5</aside>
+
+    </section>
+</body>
+
+</html>

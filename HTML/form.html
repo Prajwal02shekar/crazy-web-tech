@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Login</legend>
+            <label for="username"> Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter Username" value="Pavan" required>
+            <br><br>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" placeholder="Enter Password" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="name@gmail.com" required>
+            <br><br>
+            <label for="phNum">Ph Number:</label>
+            <input type="tel" minlength="10" maxlength="10" id="phNum" placeholder="Enter 10 digit Number" required>
+            <br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter Age" min="18" max="25">
+            <br><br>
+            <label for="gender">Select Gender</label>
+            <input type="radio"name="gender" id="gender" value="male">Male
+            <input type="radio"name="gender" id="gender" value="female">Female
+            <input type="radio"name="gender" id="gender" value="others">Others
+            <br><br>
+            <label for="course">Select Course:</label>
+            <input type="checkbox" name="course" value="java">Java
+            <input type="checkbox" name="course" value="python">Python
+            <input type="checkbox" name="course" value="mern">MERN
+            <input type="checkbox" name="course" checked value="mean">MEAN
+            <br><br>
+
+            <label for="state">Select State</label>
+            <select name="state" id="state">
+                <option value="">--Select State--</option>
+                <option value="karnataka">Karnataka</option>
+                <option value="tn">Tamil Nadu</option>
+                <option value="AP">AndraPradesh</option>
+                <option value="kerla">Kerla</option>
+            </select>
+            <br><br>
+            <label for="dob">Date of Birth</label>
+            <input type="week" id="dob" >
+            <br><br>
+            <label for="color">Select color</label>
+            <input type="color"><br><br>
+            <label for="range">Select Range</label>
+            <input type="range">
+            <label for="url">Enter Github URL</label>
+            <input type="url"><br><br>
+            <label for="address">Enter UR Address:</label>
+            <textarea name="address" id="address" rows="5" cols="40"></textarea>
+            <!-- <button type="submit">Submit</button>
+            <button type="reset">Reset</button> -->
+            <input type="submit">
+            <input type="reset">
+        </fieldset>
+    </form>
+
+
+    <!-- <form action="">
+        <table border="2px" cellspacing="10" cellpadding="10">
+            <tr>
+                <td><label for="username">Enter Username:</label></td>
+                <td><input type="text" id="username" placeholder="Enter Username" required></td>
+            </tr>
+            <tr>
+                <td>  <label for="pwd">Password:</label></td>
+                <td>
+            <input type="password" id="pwd" placeholder="Enter Password" required>
+
+                </td>
+            </tr>
+            <tr>
+                <td><button>Submit</button></td>
+                <td><button>Reset</button></td>
+            </tr>
+        </table>
+    </form> -->
+</body>
+
+</html>

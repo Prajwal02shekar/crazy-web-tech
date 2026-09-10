@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            height: 50px;
+            width: 100%;
+            background-color: cornflowerblue;
+            display: flex;
+        }
+        .logoBlock{
+            height: 50px;
+            flex-basis: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+
+        .logoBlock img{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+        .menuBlock{
+            height: 50px;
+            flex-basis: 85%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .menuBlock a{
+            color: black;
+            text-decoration: none;
+        }
+        .menuBlock a:hover{
+            border-bottom: 2px solid aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <aside class="logoBlock">
+            <img src="https://cdn.pixabay.com/photo/2022/08/22/02/05/logo-7402513_640.png" alt="">
+        </aside>
+        <aside class="menuBlock">
+            <a href="#">Home Page</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Register</a>
+            <a href="#">Login</a>
+        </aside>
+    </nav>
+</body>
+</html>
