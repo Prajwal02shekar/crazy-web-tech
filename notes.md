@@ -228,3 +228,213 @@ typeof function(){}    // "function"
 > **Note:** `typeof null` returns `"object"`. This is a well-known historical bug in JavaScript and has been retained for backward compatibility.
 
 ---
+
+## 12. Hoisting & Temporal Dead Zone
+
+### 12.1 What is Hoisting?
+Hoisting is JavaScript's default behavior of moving **declarations** (not initializations) to the top of their scope before execution.
+
+Written as:
+```js
+console.log(a);
+var a = 10;
+```
+
+Interpreted internally as:
+```js
+var a;
+console.log(a);
+a = 10;
+```
+
+### 12.2 Temporal Dead Zone (TDZ)
+The **Temporal Dead Zone (TDZ)** is the period between entering a block scope and the declaration of a `let` or `const` variable. Accessing the variable during this period results in a **ReferenceError**.
+
+---
+
+## 13. Scope in JavaScript
+
+**Scope** is the region of a program where a variable is accessible. It determines the visibility and lifetime of variables.
+
+1. **Global Scope** — Variables declared outside all functions and blocks are globally accessible.
+2. **Function Scope** — Variables declared inside a function can only be accessed within that function.
+3. **Block Scope** — Variables declared with `let` and `const` inside `{}` are accessible only within that block.
+4. **Lexical Scope** — A child function can access variables from its parent function because JavaScript uses lexical (static) scoping.
+
+```js
+function outer() {
+    let name = "John";
+
+    function inner() {
+        console.log(name);
+    }
+
+    inner();
+}
+```
+`inner()` can access `name` because it is lexically inside `outer()`.
+
+---
+
+## 14. `var` vs `let` vs `const`
+
+| | var | let | const |
+|---|---|---|---|
+| Variable Declaration | Possible | Possible | Not possible |
+| Initialization | Possible | Possible | Not possible |
+| Declaration + Initialization (one line) | Possible | Possible | Possible |
+| Variable Re-Declaration | Possible | Not possible | Not possible |
+| Re-Initialization | Possible | Possible | Not possible |
+| Re-Declaration + Re-Initialization (one line) | Possible | Not possible | Not possible |
+
+---
+
+## 15. `undefined` vs `not defined`
+
+**undefined**
+It's a primitive data type. When we try to print a variable that has been declared but not assigned a value, we get `undefined`.
+
+**not defined**
+It's an error. It occurs when we try to use a variable that has not been declared at all.
+
+---
+
+## 16. Functions in JavaScript
+
+Functions are blocks of statements that get executed whenever they are called or invoked.
+
+```js
+function greet(name) {
+    console.log("Hello " + name);
+}
+```
+
+**Function with Parameter** — A function that accepts values (arguments) as input to perform a task.
+
+**Function with Return Type** — A function that returns a value using the `return` keyword.
+
+```js
+function getNumber() {
+    return 10;
+}
+```
+
+### 16.1 Types of Functions
+
+1. **Anonymous Function** — A function without a name.
+2. **Named Function** — A function with a name or an identifier.
+3. **Function Expression** — Storing a function inside a variable.
+4. **First Class Function** — Storing a function inside a variable, on the LHS of the assignment.
+5. **Nested Function** — A function declared inside another function.
+   - **a. Closure** — Formed when a child function accesses a variable declared in its parent function.
+   - **b. Currying** — Calling a child function through multiple parentheses on the parent function; the child function returns to the parent.
+6. **Arrow Function** — Reduces regular function syntax. Introduced in ES6 (2015).
+7. **IIFE** — Immediately Invoked Function Expression — called once, right after declaration, using parentheses. Executes only once on the page.
+8. **Higher Order Function** — A function that accepts a function as an argument and/or returns a function.
+9. **Callback Function** — A function passed as an argument to another function.
+10. **Generator Function** — Can pause execution mid-way, return a value, and later resume from where it left off.
+
+**Arrow Function Rules:**
+- If there is a single parameter, parentheses are optional.
+- If the body is a single statement, curly braces `{}` are optional and support an implicit return value.
+- If curly braces are used explicitly, the value will **not** be returned automatically — use the `return` keyword.
+
+---
+
+## 17. Objects
+
+An object in JavaScript is a collection of key-value pairs used to store related data and functionality together.
+
+### 17.1 Object Inbuilt Methods
+
+| Method | Description |
+|---|---|
+| `Object.keys(obj)` | Returns an array of property names. |
+| `Object.values(obj)` | Returns an array of property values. |
+| `Object.entries(obj)` | Returns an array of key-value pairs. |
+| `Object.assign(target, source)` | Copies properties from one object to another. |
+| `Object.freeze(obj)` | Prevents modifications to the object. |
+| `Object.seal(obj)` | Prevents adding or deleting properties. |
+| `Object.hasOwn(obj, key)` | Checks if an object has its own property. |
+
+---
+
+## 18. Arrays & Array Methods
+
+An array in JavaScript is used to store multiple values in a single variable. Arrays can store numbers, strings, objects, and even other arrays.
+
+| Method | Description |
+|---|---|
+| `push()` | Add element at end |
+| `pop()` | Remove last element |
+| `unshift()` | Add element at beginning |
+| `shift()` | Remove first element |
+| `concat()` | Merge arrays |
+| `join()` | Convert array to string |
+| `slice()` | Extract part of array |
+| `splice()` | Add / remove / replace elements |
+| `indexOf()` | Find element index |
+| `includes()` | Check if element exists |
+| `reverse()` | Reverse array |
+| `sort()` | Sort array |
+| `forEach()` | Iterate through elements |
+| `map()` | Transform array |
+| `filter()` | Filter elements |
+| `find()` | Find first matching element |
+| `findIndex()` | Find first matching index |
+| `reduce()` | Reduce to single value |
+| `every()` | Check all elements |
+| `some()` | Check at least one element |
+| `flat()` | Flatten nested arrays |
+| `flatMap()` | Map and flatten |
+| `Array.isArray()` | Check if value is an array |
+
+---
+
+## 19. String Methods
+
+| Method | Description |
+|---|---|
+| `length` | Returns string length |
+| `toUpperCase()` | Convert to uppercase |
+| `toLowerCase()` | Convert to lowercase |
+| `charAt()` | Character at index |
+| `charCodeAt()` | Unicode of character |
+| `at()` | Character at index (supports negative index) |
+| `indexOf()` | First occurrence index |
+| `lastIndexOf()` | Last occurrence index |
+| `includes()` | Check substring exists |
+| `startsWith()` | Check starting text |
+| `endsWith()` | Check ending text |
+| `slice()` | Extract part of string |
+| `substring()` | Extract substring |
+| `substr()` | Extract by length (deprecated) |
+| `replace()` | Replace first occurrence |
+| `replaceAll()` | Replace all occurrences |
+| `split()` | Convert string to array |
+| `trim()` | Remove spaces from both ends |
+| `trimStart()` | Remove leading spaces |
+| `trimEnd()` | Remove trailing spaces |
+| `concat()` | Join strings |
+| `repeat()` | Repeat string |
+| `padStart()` | Pad at beginning |
+| `padEnd()` | Pad at end |
+
+---
+
+## 20. Number Methods
+
+| Method | Description |
+|---|---|
+| `toString()` | Convert number to string |
+| `toFixed(n)` | Fixed decimal places |
+| `toPrecision(n)` | Total significant digits |
+| `Number()` | Convert value to number |
+| `parseInt()` | Convert string to integer |
+| `parseFloat()` | Convert string to decimal |
+| `Number.isInteger()` | Check integer |
+| `Number.isFinite()` | Check finite number |
+| `Number.isNaN()` | Check for NaN |
+| `valueOf()` | Get primitive value |
+
+---

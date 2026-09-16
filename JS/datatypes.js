@@ -68,14 +68,14 @@
 
 //? Objects
 
-let student={
-    stdId:101,
-    stdName:"Ajith",
-    stdAge:22,
-    stdAddress:"Mysore"
-}
-console.log(student)
-console.log(student.stdId)
-console.log(student.stdName)
-console.log(student.stdAge)
-console.log(student.stdAddress)
+// let student={
+//     stdId:101,
+//     stdName:"Ajith",
+//     stdAge:22,
+//     stdAddress:"Mysore"
+// }
+// console.log(student)
+// console.log(student.stdId)
+// console.log(student.stdName)
+// console.log(student.stdAge)
+// console.log(student.stdAddress)
