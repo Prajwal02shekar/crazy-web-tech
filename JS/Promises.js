@@ -193,20 +193,78 @@
 
 
 
-fetch("https://fakestoreapi.com/products")
-.then((res)=>{
+// fetch("https://fakestoreapi.com/products")
+// .then((res)=>{
+//     console.log(res)
+//     let productsData=res.json();
+//     console.log(productsData)
+
+//     productsData.then((ab)=>{
+//         console.log(ab)
+
+//         ab.forEach((prod)=>{
+//             console.log(prod)
+//             console.log(prod.title)
+//             console.log(prod.price)
+//         })
+//     })
+// })
+
+
+
+// fetch('https://fakestoreapi.com/products')
+// .then((data)=>{
+//     console.log(data)
+//     let productsData=data.json();
+//     console.log(productsData)
+
+//     productsData.then((res)=>{
+//         console.log(res)
+
+//         res.forEach((prod)=>{
+//             console.log(prod.title)
+//             console.log(prod.price)
+//         })
+//     })
+// })
+
+//? async and await
+
+
+// async function getUsersDetails(){
+//    let respone= await fetch('https://api.github.com/users')
+//    console.log(respone)
+
+//    let data= await respone.json();
+//    console.log(data)
+
+//    data.forEach((user)=>{
+//     console.log(user.login)
+//    })
+// }
+// getUsersDetails()
+
+
+
+
+
+//! Example 2
+
+async function getProducts(){
+    let res=await fetch('https://fakestoreapi.com/products')
     console.log(res)
-    let productsData=res.json();
-    console.log(productsData)
 
-    productsData.then((ab)=>{
-        console.log(ab)
+    let products= await res.json();
+    console.log(products)
 
+    // for(let i=0;i<products.length;i++){
+    //     console.log(products[i])
+    // }
 
-        ab.forEach((prod)=>{
-            console.log(prod)
-            console.log(prod.title)
-            console.log(prod.price)
-        })
+    products.forEach((prod)=>{
+        console.log(prod.title)
+
+        console.log(prod.price)
     })
-})
+}
+getProducts()
