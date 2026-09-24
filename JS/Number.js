@@ -11,5 +11,4 @@ console.log(n1)
 // let val=n1.toString()
 // console.log(typeof val)
 
-
-console.log(Number.isFinite(10/0))
+// console.log(Number.isFinite(10/0))

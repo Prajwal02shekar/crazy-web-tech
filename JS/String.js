@@ -22,13 +22,11 @@
 // console.log(email.replaceAll('gmail','outloook'))
 
 
-
 // let str="  Javascript   "
 // console.log(str)
 // console.log(str.trim())
 // let val=str.trimStart()
 // console.log(val.length)
-
 // console.log(str.trimEnd())
 
 
