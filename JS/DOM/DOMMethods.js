@@ -18,6 +18,7 @@
 
 
 //? getElementByClassName();
+//! Example 1
 // let elem=document.getElementsByClassName('elemenet')
 // console.log(elem)
 // for(let i=0;i<elem.length;i++){
@@ -25,6 +26,7 @@
 //     elem[i].style.color="purple"
 // }
 
+//! Example 2
 // let cont=document.getElementsByClassName('container');
 // console.log(cont)
 // for(let i=0;i<cont.length;i++){
