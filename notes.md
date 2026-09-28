@@ -75,7 +75,7 @@ Code is written in a separate `.js` file and linked into the HTML page.
 | `console.error()` | Displays error messages in red. |
 | `console.warn()` | Displays warning messages in yellow. |
 | `document.write()` | Writes content directly to the webpage. |
-| `document.writeln()` | Writes content in the same line with one letter space. |
+| `document.writeln()` | Writes content followed by a newline. |
 | `alert()` | Displays a popup message. |
 | `confirm()` | Displays a confirmation dialog with OK and Cancel buttons. |
 | `prompt()` | Displays an input dialog to receive user input. |
@@ -438,3 +438,222 @@ An array in JavaScript is used to store multiple values in a single variable. Ar
 | `valueOf()` | Get primitive value |
 
 ---
+
+## 21. OOPs Concepts in JavaScript
+
+OOPs stands for Object-Oriented Programming. It is a programming approach where we organize code using objects and classes.
+
+JavaScript supports the major OOP concepts:
+
+1. **Class**
+2. **Object**
+3. **Encapsulation**
+4. **Inheritance**
+5. **Polymorphism**
+6. **Abstraction**
+
+### 21.1 Class
+A class is a blueprint or template used to create objects.
+
+### 21.2 Object
+An object is an instance of a class.
+
+### 21.3 Encapsulation
+Encapsulation means wrapping data and methods together in a single unit and controlling access to the data.
+
+### 21.4 Inheritance
+Inheritance allows one class to acquire properties and methods from another class. We use the `extends` keyword.
+
+### 21.5 Polymorphism
+Same method name but different behaviour. Polymorphism means one name, many forms.
+
+### 21.6 Abstraction
+Abstraction means hiding unnecessary implementation details and exposing only the required functionality.
+
+### 21.7 Easy Way to Remember
+
+| Concept | Analogy |
+|---|---|
+| Class | Blueprint |
+| Object | Real entity |
+| Encapsulation | Data protection |
+| Inheritance | Reusability |
+| Polymorphism | Many forms |
+| Abstraction | Hide complexity |
+
+---
+
+## 22. Synchronous vs Asynchronous JavaScript
+
+**Synchronous** — Executes code line by line, where each operation waits for the previous operation to complete.
+
+**Asynchronous** — Starts an operation and continues executing other code without waiting for that operation to finish.
+
+**Common asynchronous operations include:**
+1. `setTimeout()`
+2. API calls
+3. `fetch()`
+4. Promises
+5. `async` / `await`
+6. Event handlers
+
+> **Easy Way to Remember:**
+> - Synchronous → Wait and execute
+> - Asynchronous → Start operation and continue
+
+---
+
+## 23. Promises
+
+A **Promise** in JS is an object that represents the eventual completion or failure of an asynchronous operation. A Promise represents a value that may be available now, later, or never.
+
+**Promises are commonly used for:**
+- API calls
+- Fetching data from a server
+- Reading files
+- Timers
+- Database operations
+
+### 23.1 Promise States
+
+1. **Pending** — Operation is still running.
+2. **Fulfilled** — Operation completed successfully.
+3. **Rejected** — Operation failed.
+
+### 23.2 Syntax of a Promise
+
+```js
+new Promise((resolve, reject) => {
+    resolve();
+    reject();
+});
+```
+
+### 23.3 Example
+
+```js
+new Promise((resolve, reject) => {
+    let success = true;
+
+    if (success) {
+        resolve("Operation is successful");
+    } else {
+        reject("Operation failed");
+    }
+});
+```
+
+### 23.4 How to Handle a Promise
+
+| Method | Purpose |
+|---|---|
+| `then()` | Runs if the promise is fulfilled |
+| `catch()` | Runs if the promise is rejected |
+| `finally()` | Runs regardless of success or failure |
+
+### 23.5 Promise Methods
+
+1. `Promise.all()`
+2. `Promise.any()`
+3. `Promise.allSettled()`
+4. `Promise.race()`
+
+---
+
+## 24. BOM and DOM in JavaScript
+
+BOM (Browser Object Model) and DOM (Document Object Model) are two important concepts in JavaScript.
+
+### 24.1 BOM (Browser Object Model)
+
+BOM is used to interact with the browser and its features such as the window, location, history, navigator, and screen.
+
+```
+             Window
+                |
+    ----------------------------
+    |      |      |      |     |
+ document location history navigator screen
+```
+
+### 24.2 DOM (Document Object Model)
+
+DOM is a programming interface that represents an HTML document as a tree of objects. It allows JavaScript to access and manipulate HTML elements.
+
+```
+Document
+   |
+  html
+ /    \
+head   body
+         |
+       div
+      /   \
+     h1   p
+```
+
+### 24.3 DOM Selection Methods
+
+| Method | Description |
+|---|---|
+| `document.getElementById()` | Select element by ID |
+| `document.getElementsByClassName()` | Select elements by class |
+| `document.getElementsByTagName()` | Select elements by tag |
+| `document.querySelector()` | Select first matching element |
+| `document.querySelectorAll()` | Select all matching elements |
+
+### 24.4 DOM Manipulation
+
+| Method / Property | Description |
+|---|---|
+| `createElement()` | Create a new HTML element |
+| `appendChild()` | Add an element |
+| `removeChild()` | Remove an element |
+| `innerHTML` | Gets or sets the HTML content inside an element |
+| `innerText` | Gets or sets only the visible text inside an element |
+
+### 24.5 HTMLCollection vs NodeList
+
+| HTMLCollection | NodeList |
+|---|---|
+| Contains only HTML elements | Contains DOM nodes (elements, text nodes, comments, etc.) |
+| Returned by `getElementsByTagName()` and `getElementsByClassName()` | Returned by `querySelectorAll()` and `childNodes` |
+| Live collection (updates automatically when the DOM changes) | `querySelectorAll()` returns a static NodeList (doesn't update automatically); `childNodes` returns a live NodeList |
+| Does not support `forEach()` directly | Supports `forEach()` (for `querySelectorAll()` results) |
+| Array-like object, not a real array | Array-like object, not a real array |
+
+### 24.6 DOM Events
+
+A **DOM Event** is an action performed by the user or browser that JavaScript can detect and respond to, such as clicking, typing, submitting a form, or loading a page.
+
+**`onclick` vs `addEventListener()`**
+
+| `onclick` | `addEventListener()` |
+|---|---|
+| Supports only one event handler per element | Supports multiple event handlers |
+| Basic approach | Modern and recommended approach |
+
+**Common DOM events:**
+1. `click`
+2. `dblclick`
+3. `mouseover`
+4. `mouseout`
+5. `keydown`
+6. `keyup`
+7. `input`
+8. `change`
+9. `submit`
+
+| Event | Description |
+|---|---|
+| `onclick` | Triggered when an element is clicked |
+| `ondblclick` | Triggered when an element is double-clicked |
+| `onmouseover` | Triggered when the mouse moves over an element |
+| `onmouseout` | Triggered when the mouse leaves an element |
+| `onmousemove` | Triggered when the mouse moves inside an element |
+| `onkeydown` | Triggered when a key is pressed |
+| `onkeyup` | Triggered when a key is released |
+| `onkeypress` | Triggered when a printable key is pressed (legacy) |
+| `oninput` | Triggered when the input value changes |
+| `onchange` | Triggered when the value changes and loses focus (for many form controls) |
+| `onsubmit` | Triggered when a form is submitted |
