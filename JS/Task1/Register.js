@@ -27,8 +27,14 @@ myForm.onsubmit=(e)=>{
 
     let formData={}
     inputBox.forEach((ele)=>{
-        console.log(ele.name +":"+ ele.value)
+        // console.log(ele.name +":"+ ele.value)
+        formData[ele.name]=ele.value;
     })
     console.log(formData)
+
+    localStorage.setItem('userDetails',JSON.stringify(formData))
+    alert("User Register Successfull")
+    window.location.href='./Login.html'
+
     console.log("Form Submitted")
 }

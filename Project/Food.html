@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Page</title>
+    <link rel="stylesheet" href="./style/foodPage.css">
+</head>
+<body>
+     <!-- navbar -->
+    <header>
+        <h2>Food Zone 🍽️</h2>
+        <nav id="navbar">
+            <a href="./index.html" >Home Page</a>
+            <a href="#" class="active">Food</a>
+            <a href="#">Cart</a>
+        </nav>
+    </header>
+    <!-- navbar -->
+
+    <!-- header Container -->
+     <article id="headerContainer">
+        <h1>Food Ordering App 🍔</h1>
+     </article>
+    <!-- header Container -->
+
+    <!-- category container -->
+
+    <section class="content">
+        <select  id="category" onchange="applyFilter()">
+            <option value="All">All</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Burger">Burger</option>
+            <option value="Biryani">Biryani</option>
+            <option value="Rolls">Rolls</option>
+            <option value="Desserts">Desserts</option>
+            <option value="Drinks">Drinks</option>
+            <option value="Starters">Starters</option>
+        </select>
+
+        <input type="search" id="searchBox" placeholder="Search Food...." onkeyup="applyFilter()">
+    </section>
+    <!-- category container -->
+
+
+    <!-- food lists -->
+     <section id="food-lists" class="foodContainer">
+            
+     </section>
+    <!-- food lists -->
+
+
+     <!-- Footer -->
+     <footer>
+        <h2>@copyrights Food Lovers ❤️</h2>
+     </footer>
+    <!-- Footer -->
+</body>
+
+<script src="./script/foodPage.js"></script>
+</html>

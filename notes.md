@@ -31,7 +31,7 @@ Netscape hired Brendan Eich, who developed the first version of JavaScript in **
 | JavaScript (Dec 1995) | Renamed again to ride on Java's popularity at the time |
 | 1997 | Standardized by ECMA International as ECMAScript (ES); ES1 released |
 | ES6 / ECMAScript 2015 | Introduced many modern JavaScript features |
-| ES2024 / ES15 | Latest edition — ECMAScript continues to be updated annually |
+| ES2026 / ES17 | Latest edition — ECMAScript continues to be updated annually |
 
 ---
 
